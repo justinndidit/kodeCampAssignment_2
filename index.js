@@ -57,10 +57,13 @@ async function frontendTemplate() {
   await mkdir("/frontend-scaffold", "");
   await mkdir("frontend-scaffold", "/js");
   await mkdir("frontend-scaffold", "/css");
+  await mkdir("frontend-scaffold", "/images");
 
   await writeFile("/frontend-scaffold/js/script.js", js);
   await writeFile("/frontend-scaffold/css/style.css", css);
   await writeFile("/frontend-scaffold/index.html", html);
+
+  console.log("Frontend scaffold created successfully!");
 }
 
 frontendTemplate();
